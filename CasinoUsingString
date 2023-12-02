@@ -1,0 +1,29 @@
+# include <string.h>
+# include <stdio.h>
+int main(){
+    // This a small example of the working of the casino game.
+    // Three strings are delared.
+    char str1[20] = "chills";
+    char str2[20] = "eat";
+    char str3[20] = "cold";
+    char *r, *t;
+    // The str1 and str2 are compared.
+    r = strpbrk(str1, str2);
+    if (r != 0){
+        // The pointer is returned.
+        printf("You have won the game!\n");
+        printf("The first matching character: %c\n", *r);
+    }
+    else{
+        // NULL(0) is returned.
+        printf("Sorry you have lost !\n");
+        printf("There is no matching character.\n");
+    }
+    // The str1 and str3 are compared.
+    t = strpbrk(str1, str3);
+    if (t != 0){
+        printf("You have won the game!\n");
+        printf("The first matching character: %c\n", *t);
+    }
+    return 0;
+}
